@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.1s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+/* ----- SCROLL ----- */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 20pc;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f9f9f9;
+  }
+ 
+  ::-webkit-scrollbar-thumb {
+    background: var(--greenThree); 
+}
+
+/* ----- PRESETS ----- */
+
+:root {
+    --font-color: #575a65;
+    --fontNav-size: 0.7rem;
+    --letterSpace: 0.04rem;
+
+    --greenOne: #C7EABB;
+    --greenTwo: #A2CB8B;
+    --greenThree: #84B179;
+}
+
+/* ----- NAVIGATION BAR ----- */
+
+.nav-bar {
+    display: inline-flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-list {
+    border-bottom: 1px solid var(--greenTwo);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 0.5px solid var(--greenTwo);
+    border-right: 0.5px solid var(--greenTwo);
+}
+
+.nav-list a {
+    font-family: "Geist", sans-serif;
+    font-weight: 600;
+    color: var(--font-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: var(--fontNav-size);
+    letter-spacing: var(--letterSpace);
+}
+
+.nav-list a:visited {
+    color: var(--font-color);
+}
+
+/* ----- MAIN CONTENT ----- */
+
+#main-content {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid red;
+}
+
+#profile-left {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    border: 1px solid blue;
+}
+
+#profile-right {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    border: 1px solid red
+}
