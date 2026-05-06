@@ -27,6 +27,7 @@
     --font-color: #575a65;
     --fontNav-size: 0.7rem;
     --letterSpace: 0.04rem;
+    --fontDefault: "Geist", sans-serif;
 
     --greenOne: #C7EABB;
     --greenTwo: #A2CB8B;
@@ -73,20 +74,54 @@
 #main-content {
     display: flex;
     width: 100%;
-    height: 100vh;
-    border: 1px solid red;
+    height: 30vh;
 }
 
 #profile-left {
     display: flex;
     width: 70%;
     height: 100%;
-    border: 1px solid blue;
+    padding: 4rem;
 }
 
 #profile-right {
     display: flex;
     width: 30%;
     height: 100%;
-    border: 1px solid red
+    padding: 4rem 2rem;
+}
+
+#profile-left-content {
+    width: 100%;
+    height: 100%;
+}
+
+#profile-right-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#profile-left-content p {
+    font-family: var(--fontDefault);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: var(--letterSpace);
+    color: var(--font-color);
+}
+
+#profile-right-image {
+    width: 100px;
+    height: 100px;
+}
+
+#profile-right-image img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
 }
