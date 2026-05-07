@@ -30,11 +30,14 @@
     --fontBody-size: 0.9rem;
     --letterSpace: 0.04rem;
     --fontDefault: "Geist", sans-serif;
+    --fontOne: "Readex Pro", sans-serif;
     --backgroundPadding: 0.01rem;
 
     --greenOne: #C7EABB;
     --greenTwo: #A2CB8B;
     --greenThree: #84B179;
+    --redOne: #EA5252;
+    --whiteOne: #f2f2f2;
 }
 
 /* ----- NAVIGATION BAR ----- */
@@ -192,11 +195,19 @@
 #text1 {
     background-color: var(--greenThree);
     padding: var(--backgroundPadding);
-    color: #f2f2f2;
+    color: var(--whiteOne);
 }
 
 #body-content-list {
     display: flex;
+}
+
+.list-title {
+    font-weight: 600;
+    font-family: var(--fontDefault);
+    letter-spacing: var(--letterSpace);
+    color: var(--font-color);
+    font-size: var(--fontBody-size);
 }
 
 #likes, #dislikes {
@@ -205,4 +216,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.list p {
+    font-family: var(--fontDefault);
+    color: var(--font-color);
+    font-size: var(--fontBody-size);
+}
+
+.bold-text {
+    font-family: var(--fontOne);
+    font-size: var(--fontBody-size);
+    font-weight: 600;
+    letter-spacing: var(--letterSpace);
+    color: var(--greenTwo);
+}
+
+.matcha {
+    background-color: var(--greenThree);
+    color: var(--whiteOne);
 }
