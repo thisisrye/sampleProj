@@ -26,9 +26,11 @@
 :root {
     --font-color: #575a65;
     --fontNav-size: 0.7rem;
+    --fontHeader-size: 1.05rem;
     --fontBody-size: 0.9rem;
     --letterSpace: 0.04rem;
     --fontDefault: "Geist", sans-serif;
+    --backgroundPadding: 0.01rem;
 
     --greenOne: #C7EABB;
     --greenTwo: #A2CB8B;
@@ -75,7 +77,7 @@
 #main-content {
     display: flex;
     width: 100%;
-    height: 25vh;
+    height: 25%;
 }
 
 /* ----- LEFT CONTENT ----- */
@@ -94,7 +96,7 @@
 
 #profile-left-content p {
     font-family: var(--fontDefault);
-    font-size: 1.05rem;
+    font-size: var(--fontHeader-size);
     font-weight: 600;
     letter-spacing: var(--letterSpace);
     color: var(--font-color);
@@ -119,7 +121,7 @@
 #profile-description p:nth-child(2) {
     font-weight: 600;
     background-color: #C7EABB;
-    padding: 0.01rem;
+    padding: var(--backgroundPadding);
 }
 
 #profile-bio {
@@ -164,4 +166,43 @@
     border-radius: 50%;
     object-fit: contain;
     border: 2px solid var(--greenTwo);
+}
+
+/* ----- BODY CONTENT ----- */
+
+#body-content {
+    width: 100%;
+    height: 25%;
+}
+
+#body-content-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#body-content h1 {
+    font-family: var(--fontDefault);
+    font-size: var(--fontHeader-size);
+    color: var(--font-color);
+    font-weight: 600;
+    letter-spacing: var(--letterSpace);
+}
+
+#text1 {
+    background-color: var(--greenThree);
+    padding: var(--backgroundPadding);
+    color: #f2f2f2;
+}
+
+#body-content-list {
+    display: flex;
+}
+
+#likes, #dislikes {
+    margin-top: 2rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
