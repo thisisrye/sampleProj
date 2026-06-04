@@ -48,6 +48,7 @@
 
 .nav-bar {
     display: inline-flex;
+    position: fixed;
     width: 100%;
     height: 50px;
     align-items: center;
@@ -93,7 +94,7 @@
 
 #profiles {
     display: flex;
-    margin: 2rem;
+    margin: 6rem 2rem 2rem;
     border: 1px solid var(--greenTwo);
     align-items: center;
     justify-content: center;
@@ -193,13 +194,14 @@
 /* ----- BODY CONTENT ----- */
 
 #body-content {
-    width: 98%;
+    width: 100%;
     height: 25%;
     margin-top: 1.5rem;
 }
 
 #body {
     margin: 2rem;
+    padding: 2rem;
     border: 1px solid var(--greenTwo);
     align-items: center;
     justify-content: center;
@@ -230,6 +232,8 @@
 
 #body-content-list {
     display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .list-title {
