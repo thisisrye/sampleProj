@@ -9,7 +9,24 @@
 .flexCenter { display: flex; justify-content: center; align-items: center; }
 .flexCenterColumn { display: flex; justify-content: center; align-items: center; flex-direction: column; }
 .imgs { width: 100%; height: 100%; object-fit: contain; }
-.imgsRadius { width: 100%; height: 100%; object-fit: contain; border-radius: 100%; }
+.cover { object-fit: cover; }
+#imgsRadius { width: 100%; height: 100%; object-fit: contain; border-radius: 100%; }
+
+/* FONTS */
+@font-face {
+    font-family: "Cardo", sans-serif;
+    src: url(../fonts/Cardo/Cardo-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Karla", sans-serif;
+    src: url(../fonts/Karla/static/Karla-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
 
 /* ROOT */
 :root {
@@ -17,7 +34,7 @@
     --text: "Karla", sans-serif;
     --headingLetterSpacing: 0.5px;
     
-    --content-border-radius: 20px;
+    --content-border-radius: 1.05rem;
     --boxShadow: 3px 3px 12px -6px rgba(0,0,0,0.75);
 
     --white: #F3F4F4;
@@ -28,6 +45,8 @@
     --red: #E63946;
 
     --blackOutline: #464858;
+
+    --paddingGeneral: 4.5rem 3rem;
 }
 
 /* CLASSES + STYLES */
@@ -41,6 +60,10 @@
 
 .red {
     color: var(--red);
+}
+
+h2 {
+    font-family: var(--text);
 }
 
 body {
@@ -89,6 +112,11 @@ body {
     box-shadow: var(--boxShadow);
 }
 
+.popup-content-paragraph p {
+    text-align: justify;
+    text-align-last: center;
+}
+
 p {
     font-family: var(--text);
     line-height: 1.5;
@@ -103,14 +131,19 @@ p {
     justify-content: center;
     width: 100%;
     /* height: 40vh; */
-    padding: 4.5rem 3rem;
-    border: 2px solid wheat;
+    padding: var(--paddingGeneral);
+    /* border: 2px solid wheat; */
 }
 
 .header {
     width: 100%;
     height: 100%;
-    border: 2px solid wheat;
+    box-shadow: var(--boxShadow);
+    /* border: 2px solid wheat; */
+}
+
+.header img { 
+    border-radius: var(--content-border-radius) var(--content-border-radius) 0 0;
 }
 
 .profile-header {
@@ -120,21 +153,36 @@ p {
     height: 120px;
     margin-top: -4rem;
     margin-left: 2rem;
-    border: 0.5rem solid var(--blackOutline);
+    border: 0.5rem solid var(--black);
     border-radius: 100%;
     z-index: 2;
 }
 
-.profile-header-block {
+#miraIcon {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
 }
 
 .header-content {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
     width: 100%;
-    height: 30px;
+    /* height: 30px; */
     margin-top: -3.8rem;
-    border: 2px solid wheat;
+    padding: 2rem 3rem 2rem;
+    background-color: var(--black);
+    border-radius: 0 0 var(--content-border-radius) var(--content-border-radius);
+    /* border: 2px solid wheat; */
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    width: calc(100%/3 - 2px);
 }
 
 /* RESPONSIVE */
