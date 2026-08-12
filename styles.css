@@ -11,19 +11,42 @@
 
 /* ROOT */
 :root {
-    --heading: "Gloock", sans-serif;
-    --headingLetterSpacing: 1.1px;
-    --text: "Inter", sans-serif;
+    --heading: "Cardo", sans-serif;
+    --text: "Karla", sans-serif;
+    --headingLetterSpacing: 0.5px;
     
     --content-border-radius: 20px;
+    --boxShadow: 3px 3px 12px -6px rgba(0,0,0,0.75);
 
-    --white: #F9F7F7;
+    --white: #F3F4F4;
     --black: #393E46;
-    --dark: #222831;
+    --dark: #2C2C2C;
+    --green: #8FA28A;
+    --yellow: #FFDD9C;
+    --red: #E63946;
+
+    --blackOutline: #464858;
+}
+
+/* CLASSES + STYLES */
+.green {    
+    color: var(--green);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.red {
+    color: var(--red);
 }
 
 body {
-    background-color: var(--white);
+    background-color: var(--dark);
+}
+
+#favicon {
+    border-radius: 50%;
 }
 
 .popup {
@@ -43,51 +66,42 @@ body {
     width: 100%;
     max-width: 600px;
     padding: 30px;
-    background: var(--white);
+    background: var(--black);
     border-radius: var(--content-border-radius);
     text-align: center;
     box-sizing: border-box;
 }
 
-h2 {
+#popup_heading {
     position: relative;
     font-family: var(--heading);
     letter-spacing: var(--headingLetterSpacing);
     margin-bottom: -1.2rem;
-    font-size: 24px;
-    border-radius: 22px;
-    background-color: var(--white);
+    font-size: 20px;
+    border-radius: 24px;
+    background-color: var(--black);
     padding: 8px 22px;
-    border: 0.3px solid var(--black);
-    color: var(--black);
+    border: 2.5px solid var(--blackOutline);
+    color: var(--white);
+    box-shadow: var(--boxShadow);
 }
 
 p {
     font-family: var(--text);
     line-height: 1.5;
-    color: var(--black);
-}
-
-.profile-wrapper {
-    display: flex;
-    margin: 4rem auto;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    border: 2px solid black;
+    color: var(--white);
 }
 
 /* RESPONSIVE */
 
 /* Smaller screens */
-@media (max-width: 480px) {
+@media (max-width: 720px) {
     .popup {
         padding: 15px;
     }
 
     .popup-content {
-        padding: 20px;
+        padding: 26px;
         border-radius: 12px;
     }
 
