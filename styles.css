@@ -15,14 +15,14 @@
 /* FONTS */
 @font-face {
     font-family: "Cardo", sans-serif;
-    src: url(../fonts/Cardo/Cardo-Regular.ttf) format("truetype");
+    src: url(./fonts/Cardo/Cardo-Regular.ttf) format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Karla", sans-serif;
-    src: url(../fonts/Karla/static/Karla-Regular.ttf) format("truetype");
+    src: url(./fonts/Karla/static/Karla-Regular.ttf) format("truetype");
     font-weight: 400;
     font-style: normal;
 }
@@ -32,21 +32,25 @@
 :root {
     --heading: "Cardo", sans-serif;
     --text: "Karla", sans-serif;
+    --title-Font-Size: 0.95rem;
+    --desc-Font-Size: 0.85rem;
     --headingLetterSpacing: 0.5px;
     
     --content-border-radius: 1.05rem;
     --boxShadow: 3px 3px 12px -6px rgba(0,0,0,0.75);
 
     --white: #F3F4F4;
+    --lighterBlack: #40464f;
     --black: #393E46;
     --dark: #2C2C2C;
     --green: #8FA28A;
+    --paleYellow: #FDF0D5;
     --yellow: #FFDD9C;
     --red: #E63946;
 
     --blackOutline: #464858;
 
-    --paddingGeneral: 4.5rem 3rem;
+    --paddingGeneral: 3.5rem 4.5rem;
 }
 
 /* CLASSES + STYLES */
@@ -55,7 +59,7 @@
 }
 
 .yellow {
-    color: var(--yellow);
+    color: var(--paleYellow);
 }
 
 .red {
@@ -130,8 +134,8 @@ p {
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* height: 40vh; */
     padding: var(--paddingGeneral);
+    /* height: 40vh; */
     /* border: 2px solid wheat; */
 }
 
@@ -168,6 +172,7 @@ p {
 .header-content {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: start;
     width: 100%;
@@ -179,11 +184,218 @@ p {
     /* border: 2px solid wheat; */
 }
 
-.block {
+.header-profile-name {
+    /* width: 100%; */
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--heading);
+    letter-spacing: var(--headingLetterSpacing);
+    margin-top: -3.5rem;
+    margin-left: 7.5rem;
+    /* font-size: 20px; */
+    border-radius: 24px;
+    background-color: var(--black);
+    padding: 8px 22px;
+    border: 2.5px solid var(--blackOutline);
+    color: var(--white);
+    box-shadow: var(--boxShadow);
+}
+
+.header-contents {
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.header-content-title {
+    font-size: var(--title-Font-Size);
+    text-align: center;
+}
+
+.header-content-detail p {
+    font-size: var(--desc-Font-Size);
+}
+
+.block {
     justify-content: center;
     width: calc(100%/3 - 2px);
 }
+
+.header-navigation-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2rem;
+    /* border: 2px solid wheat; */
+}
+
+.header-comment-wrapper, .navigation-wrapper {
+    width: calc(100%/2 - 0px);
+    border: 2px solid wheat;
+}
+
+.header-comment-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--heading);
+    letter-spacing: var(--headingLetterSpacing);
+    border-radius: 24px;
+    background-color: var(--black);
+    /* padding: 3px 22px; */
+    border: 2.5px solid var(--blackOutline);
+    color: var(--white);
+    box-shadow: var(--boxShadow);
+}
+
+.header-comment-wrapper p {
+    padding: 3px 22px;
+}
+
+.header-comment-wrapper img {
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--black);
+    border-radius: 100%;
+}
+
+/* CONTENT */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: var(--paddingGeneral);
+    gap: 3rem;
+}
+
+#detailsFamily-wrapper {
+    width: calc(100%/2 - 0px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content-details-wrapper, .family-tree {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    border-radius: var(--content-border-radius);
+    box-shadow: var(--boxShadow);
+    margin-bottom: 3rem;
+}
+
+.content-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--heading);
+    letter-spacing: var(--headingLetterSpacing);
+    border-radius: 24px;
+    background-color: var(--black);
+    padding: 8px 22px;
+    margin-top: -1.35rem;
+    margin-left: 7rem;
+    border: 2.5px solid var(--blackOutline);
+    color: var(--white);
+    box-shadow: var(--boxShadow);
+}
+
+.content-title p, .family-title p {
+    font-family: var(--text);
+    letter-spacing: var(--headingLetterSpacing);
+    font-size: var(--desc-Font-Size);
+    /* box-shadow: var(--boxShadow); */
+}
+
+.content-image-wrapper {
+    width: calc(100%/2 - 0px);
+    box-shadow: var(--boxShadow);
+}
+
+.content-image-wrapper img {
+    border-radius: var(--content-border-radius) var(--content-border-radius) 0 0;
+}
+
+.content-image-details {
+    position: relative;
+    width: 100%;
+    background-color: var(--black);
+    height: 20vh;
+    margin-top: -1.05rem;
+}
+
+#birthday {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.65rem 0 0.85rem 0;
+}
+
+#birthday:nth-child(1) {
+    margin-top: 10px;
+}
+
+#birthday:nth-child(4) {
+    margin-bottom: 10px;
+}
+
+.title {
+    font-family: var(--text);
+    font-size: var(--title-Font-Size);
+    letter-spacing: var(--headingLetterSpacing);
+    color: var(--paleYellow);
+    padding: 0.2rem 0.9rem;
+    border-radius: 7px;
+    background-color: var(--lighterBlack);
+    box-shadow: var(--boxShadow);
+}
+
+#birthday p:nth-child(2) {
+    font-family: var(--text);
+    font-size: var(--desc-Font-Size);
+}
+
+.family-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--heading);
+    letter-spacing: var(--headingLetterSpacing);
+    border-radius: 24px;
+    background-color: var(--black);
+    padding: 8px 22px;
+    margin-top: -1.35rem;
+    margin-left: 6rem;
+    border: 2.5px solid var(--blackOutline);
+    color: var(--white);
+    box-shadow: var(--boxShadow);
+}
+
+.family-profiles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.45rem 0 0.85rem 0;
+}
+
+.family-profiles img {
+    width: 50px;
+    height: 50px;
+}
+
 
 /* RESPONSIVE */
 
