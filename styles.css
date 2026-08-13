@@ -32,11 +32,13 @@
 :root {
     --heading: "Cardo", sans-serif;
     --text: "Karla", sans-serif;
-    --title-Font-Size: 0.95rem;
-    --desc-Font-Size: 0.85rem;
+    --title-Font-Size: 0.60rem;
+    --desc-Font-Size: 0.55rem;
     --headingLetterSpacing: 0.5px;
     
     --content-border-radius: 1.05rem;
+    --content-border-radiusII: 0.55rem;
+    --pillPadding: 6px 15px;
     --boxShadow: 3px 3px 12px -6px rgba(0,0,0,0.75);
 
     --white: #F3F4F4;
@@ -50,7 +52,7 @@
 
     --blackOutline: #464858;
 
-    --paddingGeneral: 3.5rem 4.5rem;
+    --paddingGeneral: 3.5rem 3rem 1rem;
 }
 
 /* CLASSES + STYLES */
@@ -142,7 +144,7 @@ p {
 .header {
     width: 100%;
     height: 100%;
-    box-shadow: var(--boxShadow);
+    /* box-shadow: var(--boxShadow); */
     /* border: 2px solid wheat; */
 }
 
@@ -176,12 +178,13 @@ p {
     justify-content: center;
     align-items: start;
     width: 100%;
-    /* height: 30px; */
     margin-top: -3.8rem;
     padding: 2rem 3rem 2rem;
     background-color: var(--black);
     border-radius: 0 0 var(--content-border-radius) var(--content-border-radius);
+    box-shadow: var(--boxShadow);
     /* border: 2px solid wheat; */
+    /* height: 30px; */
 }
 
 .header-profile-name {
@@ -228,28 +231,20 @@ p {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 2rem;
-    /* border: 2px solid wheat; */
+    position: relative;
+    top: -2rem;
 }
 
 .header-comment-wrapper, .navigation-wrapper {
     width: calc(100%/2 - 0px);
-    border: 2px solid wheat;
+    /* border: 2px solid wheat; */
 }
 
 .header-comment-wrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    font-family: var(--heading);
-    letter-spacing: var(--headingLetterSpacing);
-    border-radius: 24px;
-    background-color: var(--black);
-    /* padding: 3px 22px; */
-    border: 2.5px solid var(--blackOutline);
-    color: var(--white);
-    box-shadow: var(--boxShadow);
+    justify-content: center;
+    gap: 1rem;
 }
 
 .header-comment-wrapper p {
@@ -259,8 +254,29 @@ p {
 .header-comment-wrapper img {
     width: 70px;
     height: 70px;
-    border: 2px solid var(--black);
+    border: 6px solid var(--black);
     border-radius: 100%;
+    box-shadow: var(--boxShadow);
+}
+
+.comment {
+    position: relative;
+    background: var(--black);
+    border: 2px solid var(--blackOutline);
+    border-radius: var(--content-border-radius);
+    padding: 2px 4px;
+    color: black;
+    margin-right: 0rem;
+    box-shadow: var(--boxShadow);
+    /* border: 2px solid var(--blackOutline); */
+}
+
+/* NAVIGATION */
+
+.navigation-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* CONTENT */
@@ -288,9 +304,9 @@ p {
     align-items: center;
     justify-content: center;
     background-color: var(--black);
-    border-radius: var(--content-border-radius);
+    border-radius: var(--content-border-radiusII);
     box-shadow: var(--boxShadow);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .content-title {
@@ -356,7 +372,7 @@ p {
     letter-spacing: var(--headingLetterSpacing);
     color: var(--paleYellow);
     padding: 0.2rem 0.9rem;
-    border-radius: 7px;
+    border-radius: 3px;
     background-color: var(--lighterBlack);
     box-shadow: var(--boxShadow);
 }
@@ -384,25 +400,45 @@ p {
 }
 
 .family-profiles {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.45rem 0 0.85rem 0;
+    justify-content: center;
+    padding: 0.4rem;
 }
 
 .family-profiles img {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1.5px solid var(--blackOutline);
+    box-shadow: var(--boxShadow);
+}
+
+.roleName {
+    width: calc(100% / 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.family-profiles p {
+    font-family: var(--text);
+    font-size: var(--desc-Font-Size);
+    color: var(--white);
+}
+
+#siblingTwo {
+    margin-bottom: 8px;
 }
 
 
 /* RESPONSIVE */
 
 /* Smaller screens */
-@media (max-width: 720px) {
+@media (max-width: 425px) {
     .popup {
-        padding: 15px;
+        padding: 35px;
     }
 
     .popup-content {
@@ -410,11 +446,88 @@ p {
         border-radius: 12px;
     }
 
+    #popup_heading {
+        font-size: 12px;
+        padding: 4px 22px;
+    }
+
     .popup-content h2 {
         font-size: 22px;
     }
 
     .popup-content p {
-        font-size: 14px;
+        font-size: 10px;
     }
+
+    .profile-header {
+        width: 80px;
+        height: 80px;
+        margin-top: -3.5rem;
+        margin-left: 1rem;
+    }
+
+    .header-content {
+        padding: 2rem 0.95rem 2rem;
+        margin-top: -2.5rem;
+    }
+
+    .header-profile-name {
+        padding: 6px 15px;
+        margin-top: -3rem;
+        margin-left: 5.8rem;
+    }
+
+    .header-profile-name p {
+        font-size: 9px;
+    }
+
+    .header-navigation-wrapper {
+        top: -1.3rem;
+    }
+
+    .header-comment-wrapper {
+        gap: 0.65rem;
+    }
+
+    .header-comment-wrapper img {
+        width: 40px;
+        height: 40px;
+        border: 3px solid var(--black);
+    }
+
+    .header-comment {
+        font-size: 9px;
+    }
+
+    .header-comment-wrapper p {
+        padding: 2px 14px;
+    }
+
+    /* CONTENT */
+
+    .content-wrapper {
+        padding: 1rem 3rem 1rem;
+        gap: 1rem;
+    }
+
+    .content-title, .family-title {
+        padding: var(--pillPadding);
+        margin-top: -0.95rem;
+        margin-left: 4rem;
+    }
+
+    #birthday:nth-child(1) {
+        margin-top: 5px;
+    }
+
+    #birthday {
+        gap: 0.68rem;
+        padding: 0.4rem;
+    }
+
+    .title {
+        padding: 0.2rem 0.7rem;
+    }
+
+
 }
