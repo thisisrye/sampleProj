@@ -432,6 +432,37 @@ p {
     margin-bottom: 8px;
 }
 
+.content-image-details {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.content-image-title {
+    margin-top: 0.5rem;
+}
+
+.content-image-title p, .content-image-description p {
+    font-family: var(--text);
+    font-size: var(--title-Font-Size);
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.img-container::after {
+    content: "";
+    position: relative;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(20, 20, 25, 0.85) 100%
+    );
+    pointer-events: none;
+}
 
 /* RESPONSIVE */
 
